@@ -6,7 +6,7 @@
   left: 0;
   top: 0;
 
-  background: url("./images/bg.png");
+  background: url('./images/bg.png');
   background-repeat: repeat;
   opacity: 0.03;
   background-size: 100px;
@@ -147,7 +147,7 @@
     }
 
     &::after {
-      content: " ";
+      content: ' ';
       position: absolute;
       width: 96%;
       height: 96%;
@@ -174,13 +174,13 @@ h2 {
 
 p,
 h3 {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 }
 
 a,
 button {
   text-transform: uppercase;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 }
 
 .word-break {
@@ -193,18 +193,18 @@ button {
 
   &__img {
     height: 100vh;
-    background: url("./images/noodle_bowl.jpg");
+    background: url('./images/noodle_bowl.jpg');
     background-position: 25%;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .menu-img {
-    background: url("./images/padthai.png");
+    background: url('./images/padthai.png');
   }
 
   .location-img {
-    background: url("./images/thaiChefs.jpg");
+    background: url('./images/thaiChefs.jpg');
     background-position: 100%;
   }
 
@@ -378,30 +378,16 @@ button {
 
     &-1 {
       grid-area: 1 / 1 / 2 / 2;
-
-      h1 {
-        //font-size: 3rem;
-      }
-
-      //Orange bg
-      //background: $red !important;
-
-      // &>* {
-      //     color: white !important;
-      // }
     }
 
     &-2 {
       grid-area: 1 / 2 / 2 / 3;
-      //background: white;
     }
 
     // Reverse grid order on larger screens.
     &-rev {
       .grid-2-1 {
         grid-area: 1 / 2 / 2 / 3;
-        //right: 0;
-        //left: -3vw;
       }
 
       .grid-2-2 {
@@ -425,7 +411,6 @@ button {
   }
 
   .panel-right {
-    // right: 30% !important;
     left: -30% !important;
     box-shadow: 14px 10px 2px -5px rgba(71, 50, 44, 0.233);
   }
