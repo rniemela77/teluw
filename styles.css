@@ -169,6 +169,10 @@ body {
   height: 35vh;
 }
 
+.reservations {
+  padding: 3rem 9vw;
+}
+
 .panel {
   position: relative;
   align-items: center;
@@ -354,7 +358,7 @@ button {
   align-self: end;
   padding-left: 9vw;
   margin: 0;
-  font-size: 10vw;
+  font-size: clamp(2rem, 10vw, 6rem);
 }
 
 @media only screen and (min-width: 600px) {

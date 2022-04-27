@@ -69,6 +69,9 @@ body {
   height: 35vh;
 }
 
+.reservations {
+  padding: 3rem $left-align;
+}
 //A 'horizontal' slide of the screen.
 .panel {
   position: relative;
@@ -300,7 +303,7 @@ button {
     align-self: end;
     padding-left: $left-align;
     margin: 0;
-    font-size: 10vw;
+    font-size: clamp(2rem, 10vw, 6rem);
   }
 }
 
