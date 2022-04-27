@@ -427,7 +427,7 @@ button {
   }
 }
 .footer {
-  padding: 9vw 1rem;
+  padding: 4rem 9vw;
   background: rgb(250, 73, 42);
   display: flex;
   align-items: center;
