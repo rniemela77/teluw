@@ -1,0 +1,15 @@
+{
+  "name": "thai",
+  "version": "1.0.0",
+  "description": "Simple and clean design for a fictional Thai food restaurant.",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch styles/main.scss styles.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.6.2",
+    "sass": "^1.51.0"
+  }
+}
