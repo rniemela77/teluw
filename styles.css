@@ -58,17 +58,6 @@ a {
 .nav ul li:not(:last-of-type) {
   margin-right: 1rem;
 }
-.nav ul li a {
-  padding: 0.25rem 0.5rem;
-  color: rgb(250, 73, 42);
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
-}
-.nav ul li a:hover {
-  color: white;
-  background: rgb(250, 73, 42);
-}
 
 .nav-button {
   display: none;
@@ -93,10 +82,6 @@ a {
   }
   .nav ul li:not(:last-of-type) {
     margin-right: 0;
-  }
-  .nav ul li a {
-    display: block;
-    padding: 1rem;
   }
 
   .nav-open {
@@ -142,47 +127,26 @@ body {
 }
 
 .btn {
-  transition: all 0.2s ease;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+.btn.btn-red {
+  color: rgb(250, 73, 42);
   background: none;
-  font-size: 1.2rem;
-  border: none;
-  cursor: pointer;
-  padding: 0rem 0.4rem;
 }
-.btn:hover {
-  letter-spacing: 1px;
-}
-.btn-white {
+.btn.btn-red:hover {
   color: white;
-  border-bottom: 1px solid white;
+  background: rgb(250, 73, 42);
 }
-.btn-white a {
+.btn.btn-white {
   color: white;
 }
-.btn-white:hover {
+.btn.btn-white:hover {
   background: white;
   color: rgb(250, 73, 42);
-}
-.btn-white:hover a {
-  color: rgb(250, 73, 42);
-}
-.btn-red {
-  color: rgb(250, 73, 42);
-  border-bottom: 1px solid rgb(250, 73, 42);
-}
-.btn-red a {
-  color: rgb(250, 73, 42);
-}
-.btn-red:hover {
-  background: rgb(250, 73, 42);
-  color: white;
-}
-.btn-red:hover a {
-  color: white;
-}
-.btn-simple {
-  border-bottom: none;
-  margin: 0 0.5rem 0 0;
 }
 
 .grid-2-container {
@@ -344,7 +308,7 @@ button {
     padding-left: 9vw;
   }
   .frontpage__txt__content h1 {
-    font-size: 6vw;
+    font-size: clamp(1.25rem, 6vw, 5rem);
   }
 }
 .menu-container {
@@ -451,6 +415,9 @@ button {
   }
   .contact-panel a {
     color: white;
+  }
+  .contact-panel a:hover {
+    text-decoration: underline;
   }
 
   .bg-red {

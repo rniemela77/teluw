@@ -26,17 +26,6 @@
       &:not(:last-of-type) {
         margin-right: 1rem;
       }
-      a {
-        padding: 0.25rem 0.5rem;
-        color: $red;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color $transition, background $transition;
-        &:hover {
-          color: white;
-          background: $red;
-        }
-      }
     }
   }
 }
@@ -60,10 +49,6 @@
       li {
         &:not(:last-of-type) {
           margin-right: 0;
-        }
-        a {
-          display: block;
-          padding: 1rem;
         }
       }
     }
