@@ -416,9 +416,6 @@ button {
   .contact-panel a {
     color: white;
   }
-  .contact-panel a:hover {
-    text-decoration: underline;
-  }
 
   .bg-red {
     background: rgb(250, 73, 42);
@@ -429,42 +426,38 @@ button {
     background: rgba(255, 255, 255, 0.8);
   }
 }
-footer {
+.footer {
+  padding: 9vw 1rem;
   background: rgb(250, 73, 42);
-  padding: 4.5vw 9vw 4.5vw 9vw;
-  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-footer span {
-  margin: 20px 0 0 0;
+.footer .social-media-buttons {
+  display: flex;
+  order: 2;
+}
+.footer .social-media-button {
   display: block;
 }
-
-.socialMediaMenu {
-  text-align: center;
+.footer .social-media-button img {
+  width: 100%;
+  max-width: 50px;
+  height: auto;
+}
+.footer .social-media-button:not(:last-of-type) {
+  margin-right: 1rem;
 }
 
-.socialMediaMenu img {
-  cursor: pointer;
-  height: 40px;
-  margin: 0 10px 0;
-  transition: 0.25s;
-}
-.socialMediaMenu img:hover {
-  filter: brightness(0);
-}
-
-@media only screen and (min-width: 600px) {
-  .socialMediaMenu {
-    float: right;
+@media screen and (max-width: 499px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-
-  footer ul {
-    display: flex;
-  }
-
-  footer span {
-    text-align: left;
-    margin-left: 0;
+  .footer .social-media-buttons {
+    margin-top: 2rem;
+    order: 1;
   }
 }
 
