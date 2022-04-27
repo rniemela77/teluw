@@ -24,207 +24,104 @@ a {
   text-decoration: none;
 }
 
-.logo {
-  cursor: pointer;
-  transition: 0.3s all;
-  border: 2px solid transparent;
-  height: 4.5rem;
-  width: 4.5rem;
-  background: white;
-  border-radius: 50%;
+.header {
+  padding: 2rem 9vw 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-end;
+  background: white;
+}
+
+.header-logo {
+  max-width: 80px;
+  height: auto;
+}
+
+.header-logo-wrap {
+  z-index: 3;
+  transform: translateY(2rem);
   position: relative;
 }
-.logo:hover {
-  border: 2px solid rgb(250, 73, 42);
-}
-.logo:hover .logo__circle {
-  background: white;
-}
-.logo:hover .logo__text {
-  color: rgb(250, 73, 42);
-}
-.logo:hover .logo_text {
-  font-size: 2rem !important;
-}
-.logo:active {
-  transform: scale(1) !important;
-  box-shadow: none !important;
-}
-.logo:active .logo__circle {
-  background: rgb(250, 73, 42);
-}
-.logo:active .logo__text {
-  color: white;
-}
-.logo__circle {
-  height: 4rem;
-  width: 4rem;
-  border-radius: 50%;
-  background: rgb(250, 73, 42);
-  display: table;
-  transition: 0.3s all;
-}
-.logo__text-container {
-  display: table-cell;
-  vertical-align: middle;
-}
-.logo__text {
-  font-family: "East Sea Dokdo", cursive !important;
-  text-transform: none !important;
-  font-size: 2.5rem;
-  line-height: 1rem;
-  text-align: center;
-  color: white;
-  transform: rotate(-5deg);
-  transition: 0.3s all;
-  user-select: none;
-}
 
-@media only screen and (min-width: 600px) {
-  .logo {
-    z-index: 5;
-    top: 2rem;
-  }
-
-  main {
-    overflow-x: hidden;
-  }
-}
-header {
-  z-index: 30;
-  background: white;
-  position: fixed;
-  top: 0;
-  width: 100%;
+.nav {
   display: flex;
-  transition: 0.3s;
-  padding: 0 9vw 0 8vw;
-  height: 4rem;
 }
-
-.nav-ul {
-  right: -100%;
-  transition: 0.25s;
-  top: 4rem;
-  position: fixed;
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
-.nav-ul__link {
-  background: rgb(250, 73, 42);
-  padding: 1.3rem 1.3rem;
+.nav ul li {
   display: block;
-  color: #fff;
 }
-.nav-ul__link:hover {
-  text-decoration: underline;
+.nav ul li:not(:last-of-type) {
+  margin-right: 1rem;
 }
-.nav__icon {
+.nav ul li a {
+  padding: 0.25rem 0.5rem;
   color: rgb(250, 73, 42);
-  display: block;
-  position: absolute;
-  font-size: 1.3rem;
-  padding: 1rem;
-  right: 0;
-  top: 0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
 }
-.nav .bg-overlay {
-  height: 100vh;
-  width: 100vw;
-  pointer-events: none;
-  left: 0;
-  top: 0;
-  background: rgba(215, 236, 235, 0);
-  position: fixed;
-  z-index: -1;
-  transition: background 0.3s;
-}
-.nav-active .nav__icon {
-  background: rgb(250, 73, 42) !important;
-  color: white !important;
-}
-.nav-active .nav-ul {
-  right: 0;
-}
-.nav-active .bg-overlay {
-  background: rgba(0, 0, 0, 0.596);
-  pointer-events: auto;
+.nav ul li a:hover {
+  color: white;
+  background: rgb(250, 73, 42);
 }
 
-@media only screen and (min-width: 600px) {
-  header {
-    height: 15vh;
-    z-index: 30;
-    background: white;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    transition: 0.3s;
-  }
+.nav-button {
+  display: none;
+}
 
-  .header--hide {
-    height: 0;
-    top: -20vh;
-  }
-
-  .header--small {
-    height: 4rem !important;
+@media screen and (max-width: 800px) {
+  .header {
+    padding: 0 9vw;
+    height: 5rem;
   }
 
   .nav {
-    width: 100%;
-    transition: 0.3s;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    /* hamburger */
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: white;
+    z-index: 99;
+    transition: right 0.2s ease-in-out;
   }
-  .nav-ul {
-    position: static;
+  .nav ul {
+    flex-direction: column;
   }
-  .nav-ul li {
-    display: inline-block;
+  .nav ul li:not(:last-of-type) {
+    margin-right: 0;
   }
-  .nav-ul__link {
-    background: none;
-    color: rgb(250, 73, 42);
-    padding: 0.3rem 0.5rem;
-    font-size: 0.9rem;
-    transition: 0.3s ease-in-out;
-    overflow: hidden;
-    display: inline-block;
+  .nav ul li a {
+    display: block;
+    padding: 1rem;
+  }
+
+  .nav-open {
+    right: 0;
+  }
+
+  .header {
     position: relative;
   }
-  .nav-ul__link::after {
-    transition: 0.3s ease-in-out;
-  }
-  .nav-ul__link::before {
-    transition: 0.3s ease-in-out;
-    z-index: -1;
-    content: "";
+
+  .nav-button {
+    display: block;
     position: absolute;
-    right: -50px;
-    left: 0;
     top: 0;
-    bottom: 0;
-    border-right: 50px solid transparent;
-    border-bottom: 3rem solid rgb(250, 73, 42);
-    transform: translateX(-100%);
+    right: 0;
+    height: 100%;
+    width: 4rem;
+    font-size: 1.5rem;
+    background: rgb(250, 73, 42);
+    color: white;
+    border: none;
+    cursor: pointer;
   }
-  .nav-ul__link:hover {
-    color: #fff;
-    text-decoration: none;
-  }
-  .nav-ul__link:hover:before {
-    transform: translateX(0);
-  }
-  .nav__icon {
-    display: none;
-  }
-  .nav .bg-overlay {
-    background: none;
+  .nav-button:hover {
+    background: rgba(250, 73, 42, 0.9);
   }
 }
 .bg {
@@ -238,6 +135,10 @@ header {
   opacity: 0.03;
   background-size: 100px;
   z-index: -1;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .btn {
@@ -380,7 +281,7 @@ button {
   position: relative;
 }
 .frontpage__img {
-  height: 100vh;
+  height: calc(100vh - 5rem);
   background: url("./images/noodle_bowl.jpg");
   background-position: 25%;
   background-repeat: no-repeat;
@@ -428,7 +329,6 @@ button {
     background-position: 15vw;
     background-size: cover;
     height: 70vh;
-    margin: 15vh 0;
   }
   .frontpage__txt {
     width: 50vw;
@@ -548,6 +448,9 @@ button {
 
   .contact-panel {
     background: rgb(250, 73, 42);
+  }
+  .contact-panel a {
+    color: white;
   }
 
   .bg-red {

@@ -12,6 +12,9 @@
   background-size: 100px;
   z-index: -1;
 }
+body {
+  overflow-x: hidden;
+}
 
 .btn {
   transition: all 0.2s ease;
@@ -192,7 +195,7 @@ button {
   position: relative;
 
   &__img {
-    height: 100vh;
+    height: calc(100vh - 5rem);
     background: url('./images/noodle_bowl.jpg');
     background-position: 25%;
     background-repeat: no-repeat;
@@ -246,7 +249,6 @@ button {
       background-position: 15vw;
       background-size: cover;
       height: 70vh;
-      margin: 15vh 0;
     }
 
     &__txt {
@@ -417,9 +419,9 @@ button {
 
   .contact-panel {
     background: $red;
-  }
-
-  .panel {
+    a {
+      color: white;
+    }
   }
 
   .bg-red {
