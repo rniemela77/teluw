@@ -23,6 +23,9 @@
     display: flex;
     li {
       display: block;
+      a {
+        display: block;
+      }
       &:not(:last-of-type) {
         margin-right: 1rem;
       }

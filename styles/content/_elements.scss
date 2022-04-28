@@ -20,8 +20,10 @@ body {
   padding: 0.5rem 1rem;
   text-decoration: none;
   font-weight: bold;
+  border: none;
   display: inline-block;
   transition: color $transition, background $transition;
+  cursor: pointer;
   &.btn-red {
     color: $red;
     background: none;
@@ -35,6 +37,15 @@ body {
     &:hover {
       background: white;
       color: $red;
+    }
+  }
+  &.btn-submit {
+    background: $red;
+    color: white;
+    font-size: 1.5rem;
+    width: 100%;
+    &:hover {
+      background: $redFaded;
     }
   }
 }
@@ -71,6 +82,31 @@ body {
 
 .reservations {
   padding: 3rem $left-align;
+}
+.reservations-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  .input-wrap {
+    width: 100%;
+    margin: 1rem 0;
+    label {
+      font-size: 1.3rem;
+    }
+    input {
+      font-size: 1.3rem;
+      padding: 0.5rem;
+      border: 1px solid $red;
+      border-radius: 5px;
+      width: 100%;
+    }
+  }
+  .btn-submit {
+    margin: 1rem 0 0;
+  }
 }
 //A 'horizontal' slide of the screen.
 .panel {

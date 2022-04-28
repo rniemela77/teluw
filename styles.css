@@ -55,6 +55,9 @@ a {
 .nav ul li {
   display: block;
 }
+.nav ul li a {
+  display: block;
+}
 .nav ul li:not(:last-of-type) {
   margin-right: 1rem;
 }
@@ -130,8 +133,10 @@ body {
   padding: 0.5rem 1rem;
   text-decoration: none;
   font-weight: bold;
+  border: none;
   display: inline-block;
   transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+  cursor: pointer;
 }
 .btn.btn-red {
   color: rgb(250, 73, 42);
@@ -147,6 +152,15 @@ body {
 .btn.btn-white:hover {
   background: white;
   color: rgb(250, 73, 42);
+}
+.btn.btn-submit {
+  background: rgb(250, 73, 42);
+  color: white;
+  font-size: 1.5rem;
+  width: 100%;
+}
+.btn.btn-submit:hover {
+  background: rgba(250, 73, 42, 0.9);
 }
 
 .grid-2-container {
@@ -171,6 +185,32 @@ body {
 
 .reservations {
   padding: 3rem 9vw;
+}
+
+.reservations-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.reservations-form .input-wrap {
+  width: 100%;
+  margin: 1rem 0;
+}
+.reservations-form .input-wrap label {
+  font-size: 1.3rem;
+}
+.reservations-form .input-wrap input {
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  border: 1px solid rgb(250, 73, 42);
+  border-radius: 5px;
+  width: 100%;
+}
+.reservations-form .btn-submit {
+  margin: 1rem 0 0;
 }
 
 .panel {
