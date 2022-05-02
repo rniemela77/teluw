@@ -145,40 +145,48 @@ body {
   }
 }
 
-//Styling specifically for menu.html
-.menu {
-  &-container {
-    margin: 0 auto;
-    margin-bottom: 3rem;
-    max-width: 1200px;
-  }
-
-  &-category {
-    padding: 2rem;
-
-    h2 {
-      background: $red;
+.menu-image {
+  height: 20rem;
+  overflow: hidden;
+  position: relative;
+  .menu-image-text {
+    z-index: 1;
+    position: absolute;
+    background: linear-gradient(rgba(255, 255, 255, 0), $red);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    h1 {
+      font-size: 3rem;
       color: white;
-      padding: 0.3rem;
+      position: absolute;
+      bottom: 1rem;
+      left: $left-align;
+    }
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50%;
+  }
+}
+.menu-container {
+  padding: 3rem $left-align;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  .menu-category {
+    padding: 2rem 1rem;
+    flex: 240px;
+    h2 {
       font-size: 2rem;
-      display: inline-block;
-      margin: 0 0 0.5rem 0;
+      color: $red;
     }
-
-    h3 {
-      font-size: 1.3rem;
-    }
-
-    p {
-      margin-bottom: 1.3rem;
-      color: rgba(0, 0, 0, 0.7);
-    }
-
-    padding-bottom: 0;
   }
-
-  //The "jump to..." links
-  &-list {
-    padding: 0.3rem $left-align;
-  }
+}
+.menu-item {
+  margin-bottom: 1rem;
 }
