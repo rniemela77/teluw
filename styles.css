@@ -314,8 +314,6 @@ body {
 .reservations-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   max-width: 500px;
   margin: 0 auto;
   background: white;
