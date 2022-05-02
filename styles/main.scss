@@ -1,8 +1,8 @@
 @import 'reset';
 @import 'variables';
+@import 'fonts';
 
-@import 'header/nav';
-
+@import 'content/nav';
+@import 'content/intro';
 @import 'content/elements';
-
 @import 'content/footer';
