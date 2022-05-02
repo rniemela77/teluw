@@ -112,21 +112,11 @@ a {
     background: rgba(250, 73, 42, 0.9);
   }
 }
-.bg {
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  left: 0;
-  top: 0;
-  background: url("./images/bg.png");
-  background-repeat: repeat;
-  opacity: 0.03;
-  background-size: 100px;
-  z-index: -1;
-}
-
 body {
   overflow-x: hidden;
+  background: url("./images/bg.png");
+  background-repeat: repeat;
+  background-size: 100px;
 }
 
 .btn {
@@ -336,38 +326,6 @@ button {
   }
   .intro .intro-text {
     padding: 1.5rem 3rem;
-  }
-}
-@media only screen and (min-width: 600px) {
-  .red-slant {
-    display: inline;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 87vw;
-  }
-
-  .frontpage__img {
-    background-position: 15vw;
-    background-size: cover;
-    height: 70vh;
-  }
-  .frontpage__txt {
-    width: 50vw;
-    height: 100%;
-    background: none;
-    display: flex;
-    padding: 0;
-  }
-  .frontpage__txt__content {
-    margin: 0 auto;
-    align-self: center;
-    position: absolute;
-    padding-left: 9vw;
-  }
-  .frontpage__txt__content h1 {
-    font-size: clamp(1.25rem, 6vw, 5rem);
   }
 }
 .menu-container {
