@@ -301,6 +301,11 @@ body {
   .row .row-image {
     width: 100%;
   }
+
+  .row--map .row-text {
+    position: unset;
+    transform: unset;
+  }
 }
 .reservations {
   padding: 3rem 9vw;

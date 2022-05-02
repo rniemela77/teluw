@@ -114,6 +114,12 @@ body {
       width: 100%;
     }
   }
+  .row--map {
+    .row-text {
+      position: unset;
+      transform: unset;
+    }
+  }
 }
 
 .reservations {
